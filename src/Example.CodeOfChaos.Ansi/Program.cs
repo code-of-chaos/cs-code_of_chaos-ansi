@@ -16,8 +16,7 @@ public static class Program {
 
         builder.Foreground.AppendRedLine("something here");
         builder.Foreground.AppendGreenLine("something green here");
-
-
+        
         builder.WithForeground(b => b
             .AppendRedLine("something red here")
             .AppendLine($"something {b.Fore.Green(b.Back.Yellow("green on yellow"))} here")
