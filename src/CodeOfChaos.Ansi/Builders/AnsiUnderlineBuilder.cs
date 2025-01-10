@@ -5,8 +5,8 @@ namespace CodeOfChaos.Ansi;
 // ---------------------------------------------------------------------------------------------------------------------
 // Code
 // ---------------------------------------------------------------------------------------------------------------------
-public partial class AnsiBackgroundBuilder : AnsiStringBuilder {
-    private AnsiBackgroundBuilder BuilderAction(Action action) {
+public partial class AnsiUnderlineBuilder : AnsiStringBuilder {
+    private AnsiUnderlineBuilder BuilderAction(Action action) {
         action();
         return this;
     }

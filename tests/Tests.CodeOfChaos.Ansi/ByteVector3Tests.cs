@@ -88,7 +88,7 @@ public class ByteVector3Tests {
     [Arguments(int.MaxValue, int.MaxValue, int.MaxValue, "rgb(255,255,255)")]
     public async Task ToRgbString_Should_Return_Correct_Format(int x, int y, int z, string expected) {
         // Arrange
-        var vector = new ByteVector3(x,y,z);
+        var vector = new ByteVector3(x, y, z);
 
         // Act
         string result = vector.ToRgbString();

@@ -18,24 +18,25 @@ public class ColorEntryContainer {
 }
 
 public class XmlColorEntry {
+
+    private readonly Regex _regexCommaSeparated = new(@"^(\d+)[,.;:](\d+)[,.;:](\d+)$", RegexOptions.Compiled);
+    private readonly Regex _regexHexFormat = new(@"^#?([A-Fa-f0-9]{6})$", RegexOptions.Compiled);
     [XmlAttribute("Name")]
     public string Name { get; set; } = string.Empty;// Name attribute for the color
 
     [XmlAttribute("Color")]
     public string Color { get; set; } = string.Empty;// RGB values as a comma-separated string
-    
-    private readonly Regex _regexCommaSeparated = new(@"^(\d+)[,.;:](\d+)[,.;:](\d+)$", RegexOptions.Compiled);
-    private readonly Regex _regexHexFormat = new(@"^#?([A-Fa-f0-9]{6})$", RegexOptions.Compiled);
 
     public ColorEntry ToColorEntry() {
-        if (_regexCommaSeparated.Match(Color) is {Success : true } match) return new ColorEntry {
-            Name = Name,
-            Codes = [
-                int.Parse(match.Groups[1].Value),
-                int.Parse(match.Groups[2].Value),
-                int.Parse(match.Groups[3].Value)
-            ]
-        };
+        if (_regexCommaSeparated.Match(Color) is { Success : true } match)
+            return new ColorEntry {
+                Name = Name,
+                Codes = [
+                    int.Parse(match.Groups[1].Value),
+                    int.Parse(match.Groups[2].Value),
+                    int.Parse(match.Groups[3].Value)
+                ]
+            };
 
         if (_regexHexFormat.IsMatch(Color)) {
             string hex = Color.TrimStart('#');
@@ -55,6 +56,6 @@ public class ColorEntry {
     public string Name { get; set; } = string.Empty;// Mapped Name
 
     public int[] Codes { get; set; } = [];// Mapped and split RGB values
-    
+
     public string Colors => string.Join(",", Codes);
 }
