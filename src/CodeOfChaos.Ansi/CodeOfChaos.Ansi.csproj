@@ -28,11 +28,17 @@
     </ItemGroup>
 
     <ItemGroup>
+        <!-- ProjectReference for the generator as an analyzer -->
         <ProjectReference Include="..\CodeOfChaos.Ansi.Generators\CodeOfChaos.Ansi.Generators.csproj" OutputItemType="Analyzer" ReferenceOutputAssembly="false" />
 
         <!-- Ugly, but this is because of some weirdness with how analyzers are imported through a project reference -->
-        <PackageReference Include="CodeOfChaos.GeneratorTools" Version="1.1.2" GeneratePathProperty="true" PrivateAssets="all" />
+        <PackageReference Include="CodeOfChaos.GeneratorTools" Version="1.2.0" GeneratePathProperty="true" PrivateAssets="all" />
         <Analyzer Include="$(PkgCodeOfChaos_GeneratorTools)\lib\netstandard2.0\*.dll" />
+    </ItemGroup>
+    
+    <ItemGroup>
+        <None Include="Assets\ASB.CssColors.xml" />
+        <AdditionalFiles Include="Assets\ASB.CssColors.xml"/>
     </ItemGroup>
 
 </Project>

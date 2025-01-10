@@ -1,0 +1,6 @@
+<ColorEntries>
+    <ColorEntry Name="Red" Color="FF0000"/>
+    <ColorEntry Name="Green" Color="0,255,0"/>
+    <ColorEntry Name="Blue" Color="0,0,255"/>
+    <ColorEntry Name="Yellow" Color="255,255,0"/>
+</ColorEntries>
