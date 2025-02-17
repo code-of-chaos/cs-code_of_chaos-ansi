@@ -25,8 +25,7 @@ public readonly record struct ByteVector3(
         (byte)Math.Clamp(x, byte.MinValue, byte.MaxValue),
         (byte)Math.Clamp(y, byte.MinValue, byte.MaxValue),
         (byte)Math.Clamp(z, byte.MinValue, byte.MaxValue)
-    ) {
-    }
+    ) {}
 
     // -----------------------------------------------------------------------------------------------------------------
     // Methods

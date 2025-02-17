@@ -22,23 +22,23 @@
     </PropertyGroup>
 
     <ItemGroup>
-        <None Include="../../LICENSE" Pack="true" PackagePath="" Visible="false" />
-        <None Include="../../README.md" Pack="true" PackagePath="" />
-        <None Include="../../assets/icon.png" Pack="true" PackagePath="" Visible="false" />
+        <None Include="../../LICENSE" Pack="true" PackagePath="" Visible="false"/>
+        <None Include="../../README.md" Pack="true" PackagePath=""/>
+        <None Include="../../assets/icon.png" Pack="true" PackagePath="" Visible="false"/>
     </ItemGroup>
 
     <ItemGroup>
         <!-- ProjectReference for the generator as an analyzer -->
-        <ProjectReference Include="..\CodeOfChaos.Ansi.Generators\CodeOfChaos.Ansi.Generators.csproj" OutputItemType="Analyzer" ReferenceOutputAssembly="false" />
+        <ProjectReference Include="..\CodeOfChaos.Ansi.Generators\CodeOfChaos.Ansi.Generators.csproj" OutputItemType="Analyzer" ReferenceOutputAssembly="false"/>
 
         <!-- Ugly, but this is because of some weirdness with how analyzers are imported through a project reference -->
-        <PackageReference Include="CodeOfChaos.GeneratorTools" Version="1.4.0" GeneratePathProperty="true" PrivateAssets="all" />
-        <Analyzer Include="$(PkgCodeOfChaos_GeneratorTools)\lib\netstandard2.0\*.dll" />
+        <PackageReference Include="CodeOfChaos.GeneratorTools" Version="1.4.0" GeneratePathProperty="true" PrivateAssets="all"/>
+        <Analyzer Include="$(PkgCodeOfChaos_GeneratorTools)\lib\netstandard2.0\*.dll"/>
     </ItemGroup>
 
     <ItemGroup>
-        <None Include="Assets\ASB.CssColors.xml" />
-        <AdditionalFiles Include="Assets\ASB.CssColors.xml" />
+        <None Include="Assets\ASB.CssColors.xml"/>
+        <AdditionalFiles Include="Assets\ASB.CssColors.xml"/>
     </ItemGroup>
 
 </Project>

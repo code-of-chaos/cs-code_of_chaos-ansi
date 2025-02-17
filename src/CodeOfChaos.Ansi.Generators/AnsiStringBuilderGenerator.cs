@@ -48,7 +48,7 @@ public class AnsiStringBuilderGenerator : IIncrementalGenerator {
             .AppendLine("}")
             .ToStringAndClear());
         #endregion
-        
+
         #region Fore & Background
         foreach (string section in new[] { "Foreground", "Background", "Underline" }) {
             context.AddSource($"Ansi{section}Builder.g.cs", builder
@@ -138,6 +138,7 @@ public class AnsiStringBuilderGenerator : IIncrementalGenerator {
                     DiagnosticSeverity.Warning,
                     true),
                 Location.None));
+
             return [];
         }
         catch (FormatException ex) {
@@ -151,6 +152,7 @@ public class AnsiStringBuilderGenerator : IIncrementalGenerator {
                     DiagnosticSeverity.Warning,
                     true),
                 Location.None));
+
             return [];
         }
     }

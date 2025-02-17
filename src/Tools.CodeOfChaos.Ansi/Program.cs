@@ -25,6 +25,7 @@ public static class Program {
             "CodeOfChaos.Ansi",
             "CodeOfChaos.Ansi.Generators"
         );
+
         string oneLineArgs = InputHelper.ToOneLine(args).Replace("%PROJECTS%", projects);
 
         // Finally start executing
