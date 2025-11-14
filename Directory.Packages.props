@@ -1,0 +1,17 @@
+<Project>
+  <PropertyGroup>
+    <!-- Enable central package management, https://learn.microsoft.com/en-us/nuget/consume-packages/Central-Package-Management -->
+    <ManagePackageVersionsCentrally>true</ManagePackageVersionsCentrally>
+  </PropertyGroup>
+  <ItemGroup>
+      <PackageVersion Include="JetBrains.Annotations" Version="2025.2.2" />
+      <PackageVersion Include="Microsoft.CodeAnalysis.Analyzers" Version="3.11.0" />
+      <PackageVersion Include="Microsoft.CodeAnalysis.Common" Version="4.14.0" />
+      <PackageVersion Include="Microsoft.CodeAnalysis.CSharp" Version="4.14.0" />
+      <PackageVersion Include="CodeOfChaos.GeneratorTools" Version="2.2.1" />
+      <PackageVersion Include="CodeOfChaos.CliArgsParser.Library" Version="5.1.2" />
+      <PackageVersion Include="Moq" Version="4.20.72"/>
+      <PackageVersion Include="TUnit" Version="1.0.48" />
+      <PackageVersion Include="Bogus" Version="35.6.5" />
+  </ItemGroup>
+</Project>

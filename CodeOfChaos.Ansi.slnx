@@ -1,0 +1,21 @@
+<Solution>
+  <Folder Name="/.dev-tools/">
+    <File Path=".github/workflows/workflow-todo.yml" />
+    <Project Path="src/Tools.CodeOfChaos.Ansi/Tools.CodeOfChaos.Ansi.csproj" />
+  </Folder>
+  <Folder Name="/.dev-tools/github/">
+    <File Path=".github/workflows/onPullRequest-TestDotnet.yml" />
+    <File Path=".github/workflows/release.yml" />
+  </Folder>
+  <Folder Name="/example/">
+    <Project Path="src/Example.CodeOfChaos.Ansi/Example.CodeOfChaos.Ansi.csproj" />
+  </Folder>
+  <Folder Name="/src/">
+    <File Path="Directory.Packages.props" />
+    <Project Path="src/CodeOfChaos.Ansi.Generators/CodeOfChaos.Ansi.Generators.csproj" />
+    <Project Path="src/CodeOfChaos.Ansi/CodeOfChaos.Ansi.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/Tests.CodeOfChaos.Ansi/Tests.CodeOfChaos.Ansi.csproj" />
+  </Folder>
+</Solution>
