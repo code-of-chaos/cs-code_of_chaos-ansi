@@ -26,4 +26,4 @@ jobs:
               run: dotnet build CodeOfChaos.Ansi.slnx --configuration Release --no-restore
             
             - name: Run tests
-              run: dotnet test CodeOfChaos.Ansi.slnx --configuration Release --no-restore --no-build
+              run: dotnet test --solution CodeOfChaos.Ansi.slnx --configuration Release --no-restore --no-build
