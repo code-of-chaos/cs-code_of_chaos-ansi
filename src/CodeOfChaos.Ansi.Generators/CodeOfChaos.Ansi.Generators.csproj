@@ -16,7 +16,7 @@
 
         <!-- Main package name -->
         <PackageId>CodeOfChaos.Ansi.Generators</PackageId>
-        <Version>1.1.0</Version>
+        <Version>1.2.0</Version>
         <Authors>Anna Sas</Authors>
         <Description>A library to write Ansi Colored text as a stringbuilder</Description>
         <PackageProjectUrl>https://github.com/code-of-chaos/cs-code_of_chaos-ansi/</PackageProjectUrl>
